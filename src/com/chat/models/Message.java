@@ -1,4 +1,4 @@
-package com.chat;
+package com.chat.models;
 
 
 public class Message {
