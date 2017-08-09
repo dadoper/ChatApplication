@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-black w3-card-2" style="width:120px">
+  <h5 class="w3-bar-item">ChatScreen</h5>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade')">Friend#1</button>
+  </div>
+
+<div style="margin-left:130px">
+  <div class="w3-padding">Welcome to our chat application. Connect with your friends now!</div>
+
+  <div id="Fade" class="w3-container city w3-animate-opacity" style="display:none">
+  <h2>Friend#1</h2>
+  <p></p>
+  </div> 
+
+</div>
+
+<script>
+function openLink(evt, animName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(animName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+
+</body>
+</html>
